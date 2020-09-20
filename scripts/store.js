@@ -34,7 +34,11 @@ const findAndUpdateName = function(id, newName) {
 const findAndDelete = function (id) {
   const index = this.items.findIndex(item => item.id === id);
   this.items.splice(index, 1);
-};   
+};
+
+const toggleCheckedFilter = function() {
+  this.hideCheckedItems = !this.hideCheckedItems;
+};
 
 export default {
   addItem, 
@@ -43,5 +47,6 @@ export default {
   findAndDelete,
   findAndUpdateName,
   items,
-  hideCheckedItems
+  hideCheckedItems,
+  toggleCheckedFilter
 };
